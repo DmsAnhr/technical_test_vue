@@ -14,17 +14,7 @@
       </section>
 
       <section class="space-y-4">
-        <div class="flex items-center justify-between">
-          <h3 class="text-lg font-semibold text-gray-900">History Generate</h3>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <div class="p-6">
-            <div class="h-32 border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center bg-gray-50">
-              <span class="text-gray-400 font-medium">History Table Component (Task 4)</span>
-            </div>
-          </div>
-        </div>
+        <HistoryTable />
       </section>
 
     </main>

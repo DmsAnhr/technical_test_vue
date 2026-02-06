@@ -121,6 +121,8 @@
 </template>
 
 <script setup lang="ts">
+    const { addToHistory } = useReport();
+    
     // State Form
     const formData = reactive({
         pageSize: 'A4',
@@ -195,7 +197,6 @@
         return isValid;
     };
 
-    // Fungsi Submit
     const handleSubmit = async () => {
         if (!validateForm()) return;
 
@@ -203,18 +204,25 @@
         generalError.value = '';
 
         try {
-            // API Call Simulation
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            
-            showSuccessToast.value = true;        
-            console.log('Generating PDF with data:', toRaw(formData));
+            // Delay Simulation
+            await new Promise(resolve => setTimeout(resolve, 1500));
 
+            addToHistory({
+                title: formData.title,
+                pageSize: formData.pageSize,
+                amount: formData.amount,
+                description: formData.description
+            });
+
+            showSuccessToast.value = true;
             resetForm();
+
             setTimeout(() => {
                 showSuccessToast.value = false;
             }, 3000);
 
         } catch (err) {
+            console.error(err);
             generalError.value = 'Terjadi kesalahan saat generate PDF.';
         } finally {
             isLoading.value = false;
