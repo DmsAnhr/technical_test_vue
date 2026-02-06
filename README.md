@@ -1,75 +1,47 @@
-# Nuxt Minimal Starter
+# PDF Report Generator Dashboard
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Dashboard web sederhana untuk membuat laporan PDF dengan input parameter dinamis dan riwayat generate yang tersimpan. Proyek ini dibuat sebagai bagian dari Technical Test Frontend Developer.
 
-## Setup
+## 🚀 Fitur Utama
 
-Make sure to install dependencies:
+* **Form Konfigurasi Laporan:** Input Judul, Ukuran Halaman (A4/A5/Letter), Nominal (Format Rupiah), dan Deskripsi.
+* **Validasi Real-time:** Menangani input required, min-length, dan format angka.
+* **Komponen Currency Input:** Input khusus yang memformat angka ribuan secara otomatis (Rp) namun menyimpan data sebagai number.
+* **Riwayat (History):** Menyimpan daftar laporan yang pernah dibuat menggunakan LocalStorage (Data tidak hilang saat refresh).
+* **Responsive Design:** Tampilan optimal dari Mobile (320px) hingga Desktop (1920px).
 
-```bash
-# npm
-npm install
+## 🛠️ Tech Stack
 
-# pnpm
-pnpm install
+* **Framework:** [Nuxt 4](https://nuxt.com) (Vue.js 3 Composition API)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com)
+* **Icons:** Heroicons (SVG)
+* **State Management:** Vue Reactivity & Composables (`useReport`)
 
-# yarn
-yarn install
+## 📦 Cara Menjalankan Project
 
-# bun
-bun install
-```
+Pastikan Node.js sudah terinstall di komputer Anda.
 
-## Development Server
+1.  **Clone atau Extract repository ini**
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+4.  **Buka di browser:**
+    Akses `http://localhost:3000`
 
-Start the development server on `http://localhost:3000`:
+## 📂 Struktur Folder
 
-```bash
-# npm
-npm run dev
+Proyek ini menggunakan struktur folder `app/` untuk kerapian kode (Nuxt 4 Future Compatibility).
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+```text
+app/
+├── assets/css/        # Konfigurasi Tailwind CSS
+├── components/
+│   ├── common/        # Komponen UI Reusable (Header, CurrencyInput)
+│   └── dashboard/     # Komponen Fitur (Form, Table)
+├── composables/       # Logic & State Management (useReport)
+└── app.vue            # Layout Utama
