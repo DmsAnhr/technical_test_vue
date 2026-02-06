@@ -1,5 +1,7 @@
 # PDF Report Generator Dashboard
 
+### Repository : https://github.com/DmsAnhr/technical_test_vue
+
 Dashboard web sederhana untuk membuat laporan PDF dengan input parameter dinamis dan riwayat generate yang tersimpan. Proyek ini dibuat sebagai bagian dari Technical Test Frontend Developer.
 
 ## 🚀 Fitur Utama
