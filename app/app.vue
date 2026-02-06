@@ -10,13 +10,7 @@
       </div>
 
       <section>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <div class="p-6">
-            <div class="h-40 border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center bg-gray-50">
-              <span class="text-gray-400 font-medium">Form Input Component (Task 2)</span>
-            </div>
-          </div>
-        </div>
+        <ReportForm />
       </section>
 
       <section class="space-y-4">
